@@ -14,6 +14,7 @@ static int16_t error;
 #define TFT_RST 8
 #define TFT_DC 9
 int j = 0;
+int t= 0;
 Adafruit_ST7789 tft = Adafruit_ST7789(-1, TFT_DC, TFT_RST);
 
 
