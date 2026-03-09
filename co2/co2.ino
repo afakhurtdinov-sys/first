@@ -13,8 +13,6 @@ static int16_t error;
 #define TFT_CS 11
 #define TFT_RST 8
 #define TFT_DC 9
-int j = 0;
-int t= 0;
 Adafruit_ST7789 tft = Adafruit_ST7789(-1, TFT_DC, TFT_RST);
 
 
@@ -73,7 +71,7 @@ void loop() {
       tft.fillCircle(120, 120, 60, ST77XX_YELLOW);
       tft.setCursor(50, 100);
       tft.setTextColor(ST77XX_BLUE);
-      tft.setTextSize(5);
+      tft.setTextSize(6);
       tft.println(humidity);
     }
     if (results.value == 0x168940BF){
