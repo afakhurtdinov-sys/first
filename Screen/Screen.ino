@@ -43,6 +43,26 @@ void setup() {
 
 
 void loop() {
+ 
+}
+
+
+
+/*void loop() {
+  tft.fillCircle(X, Y, 20, ST77XX_RED);
+  tft.fillCircle(X, Y, 20, 0x565);
+  Y = calculate(Y,yDest,2);
+  X = calculate(X,xDest,3);
+}
+
+int calculate(int a, int& dest, int step){
+  int v=a+(dest)*step;
+  if (v>=240 || v<=0){
+    dest = (dest)*(-1);
+  }
+  return v;
+}*/
+void sharik(){
   tft.fillCircle(X, Y, 20, ST77XX_RED);
   delay(10);
   tft.fillCircle(X, Y, 20, 0x565);
@@ -92,20 +112,3 @@ void loop() {
   Serial.print(dom);
   Serial.println(dom);
 }
-
-
-
-/*void loop() {
-  tft.fillCircle(X, Y, 20, ST77XX_RED);
-  tft.fillCircle(X, Y, 20, 0x565);
-  Y = calculate(Y,yDest,2);
-  X = calculate(X,xDest,3);
-}
-
-int calculate(int a, int& dest, int step){
-  int v=a+(dest)*step;
-  if (v>=240 || v<=0){
-    dest = (dest)*(-1);
-  }
-  return v;
-}*/
