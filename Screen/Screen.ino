@@ -20,9 +20,7 @@ void setup() {
 
   pinMode(top, INPUT);
   tft.init(240, 240, SPI_MODE3);  // Напиши свое разрешение экрана
-
   tft.setRotation(1);  // если изображение перевернуто, смените значение на 3
-
   tft.fillScreen(ST77XX_BLACK);
   tft.setCursor(10, 100);
   tft.setTextColor(ST77XX_BLUE);
@@ -40,28 +38,9 @@ void setup() {
   hopl = true;
   trigger = true;
 }
-
-
 void loop() {
- 
+ sharik();
 }
-
-
-
-/*void loop() {
-  tft.fillCircle(X, Y, 20, ST77XX_RED);
-  tft.fillCircle(X, Y, 20, 0x565);
-  Y = calculate(Y,yDest,2);
-  X = calculate(X,xDest,3);
-}
-
-int calculate(int a, int& dest, int step){
-  int v=a+(dest)*step;
-  if (v>=240 || v<=0){
-    dest = (dest)*(-1);
-  }
-  return v;
-}*/
 void sharik(){
   tft.fillCircle(X, Y, 20, ST77XX_RED);
   delay(10);
